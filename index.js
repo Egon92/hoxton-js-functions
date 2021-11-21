@@ -24,12 +24,12 @@
 // Input: a (number), b (number)
 // Action: Add both numbers together
 // Output: The result (number)
-function add(a , b) {
+function add(a,b) {
     // write your code here
     let sum = a+b
     return sum 
-  }
-  add()
+    }
+  console.log(add(2,3))
   
   // Input: number
   // Action: Check if the number given is even or not
@@ -40,8 +40,9 @@ function add(a , b) {
         return `even`
     }
     return `odd`
+    
   }
-  isEven()
+  console.log(isEven())
   
   // Input: name (string)
   // Action: Greet the user by name
@@ -49,8 +50,8 @@ function add(a , b) {
   function greet(name) {
     // write your code here
     return `Hello ${name} my friend!`
-  }
-  greet()
+    }
+  console.log(greet())
   
   // Input: age (number)
   // Action: Check if the age is 18 or over
@@ -62,7 +63,7 @@ function add(a , b) {
     }
         return 'Not an adult yet!'
   }
-  isAnAdult()
+  console.log(isAnAdult())
   
   // Input: age (number)
   // Action: Check how many years are left until adulthood (18)
@@ -71,8 +72,9 @@ function add(a , b) {
     // write your code here
     let yearsToAdult = 18 - age
     return yearsToAdult
-  }
-  yearsToAdulthood()
+    }
+  console.log(yearsToAdulthood())
+  
 
   // Input: person ({ age: number, name: string })
   // Action:
@@ -80,6 +82,7 @@ function add(a , b) {
   //   - if they are, greet them
   //   - if they are not, tell them to come back in X years (when they are)
   // Output: The result (string)
+  
   function admit(name, age) {
     // write your code here
     // use greet, isAnAdult and yearsToAdulthood to help you!
@@ -91,7 +94,9 @@ function add(a , b) {
         return`${name}, you are not an adult yet. You can come back in ${yearsToAdult} years please!`
     }
   }
-    let name = prompt("What's your name?")
-    let age = Number(prompt("How old are you?"))
-    admit(name, age)
-  
+  let name = prompt("What's your name?")
+//   console.log(name)
+  let age = Number(prompt("How old are you?"))
+//   console.log(age)
+
+  console.log(admit(name, age))

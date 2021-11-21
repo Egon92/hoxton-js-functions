@@ -24,79 +24,83 @@
 // Input: a (number), b (number)
 // Action: Add both numbers together
 // Output: The result (number)
-function add(a,b) {
-    // write your code here
-    let sum = a+b
-    return sum 
-    }
-  console.log(add(2,3))
+// function add(a,b) {
+//     let sum = a+b
+//     return sum 
+//     }
+//   console.log(add(2,3))
+  
+  
+  
   
   // Input: number
   // Action: Check if the number given is even or not
   // Output: The result (boolean)
-  function isEven(a) {
-    // write your code here
-    if(a%2===0){
-        return `even`
-    }
-    return `odd`
-    
-  }
-  console.log(isEven())
+  //   function isEven(a) {
+  //     if(a%2===0){
+  //         return `even`
+  //     }
+  //     return `odd`
+  //     }
+  //   console.log(isEven(5))
+  
+
+
+let name = prompt("What's your name?")
+let age = Number(prompt("How old are you?"))
+
   
   // Input: name (string)
   // Action: Greet the user by name
   // Output: The greeting (string)
   function greet(name) {
-    // write your code here
-    return `Hello ${name} my friend!`
+    return name
     }
-  console.log(greet())
+    let greetName = greet(name)
+    console.log(greetName)
+  
   
   // Input: age (number)
   // Action: Check if the age is 18 or over
   // Output: The result (boolean)
   function isAnAdult(age) {
-    // write your code here
+    let adult = true 
     if (age>=18){
-        return `An adult!`
+    return adult 
+        }
+    return !adult
     }
-        return 'Not an adult yet!'
-  }
-  console.log(isAnAdult())
+    let adultOrNot = isAnAdult(age)
+    console.log(adultOrNot)  
+  
+  
   
   // Input: age (number)
   // Action: Check how many years are left until adulthood (18)
   // Output: The result (number)
-  function yearsToAdulthood(age) {
-    // write your code here
+  function yearsToAdulthood() {
     let yearsToAdult = 18 - age
     return yearsToAdult
     }
-  console.log(yearsToAdulthood())
+    let yearsToAdult = yearsToAdulthood(age)
+    console.log(yearsToAdult)
   
-
+  
+  
   // Input: person ({ age: number, name: string })
   // Action:
   //   - check if a person is an adult
   //   - if they are, greet them
   //   - if they are not, tell them to come back in X years (when they are)
   // Output: The result (string)
-  
-  function admit(name, age) {
-    // write your code here
-    // use greet, isAnAdult and yearsToAdulthood to help you!
-    
-    let yearsToAdult = 18-age
-    if(age>=18){
-        return `Hi ${name}, you are an adult. You can come in!`
-    }else if (age<18){
-        return`${name}, you are not an adult yet. You can come back in ${yearsToAdult} years please!`
+    function admit(name, age) {
+        if(adultOrNot === true){
+            return `Hi ${greetName}. You are an adult. You can come in!`
+        }else if(adultOrNot === false){
+            return `Hi ${greetName}, you are not an adult. Please come again after ${yearsToAdult} years!`
+        }
     }
-  }
-  let name = prompt("What's your name?")
-//   console.log(name)
-  let age = Number(prompt("How old are you?"))
-//   console.log(age)
 
-  console.log(admit(name, age))
+    let admitOrNot = admit(name, age)
+    console.log(admitOrNot)
+  

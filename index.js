@@ -80,9 +80,10 @@ function add(a , b) {
   //   - if they are, greet them
   //   - if they are not, tell them to come back in X years (when they are)
   // Output: The result (string)
-  function admit(age, name ) {
+  function admit(name, age) {
     // write your code here
     // use greet, isAnAdult and yearsToAdulthood to help you!
+    
     let yearsToAdult = 18-age
     if(age>=18){
         return `Hi ${name}, you are an adult. You can come in!`
@@ -90,5 +91,7 @@ function add(a , b) {
         return`${name}, you are not an adult yet. You can come back in ${yearsToAdult} years please!`
     }
   }
-  admit()
+    let name = prompt("What's your name?")
+    let age = Number(prompt("How old are you?"))
+    admit(name, age)
   
